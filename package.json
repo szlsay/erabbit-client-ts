@@ -11,7 +11,8 @@
     "vue": "^3.2.26",
     "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.12",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.15",
