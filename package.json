@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "core-js": "^3.20.1",
+    "normalize.css": "^8.0.1",
     "vue": "^3.2.26",
     "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.12",
