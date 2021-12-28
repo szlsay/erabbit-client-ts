@@ -1,6 +1,6 @@
 <template>
   <AppTopNav>顶部通栏</AppTopNav>
-  <header>头部</header>
+  <AppHeader>头部</AppHeader>
   <main>
     <router-view></router-view>
   </main>
@@ -11,11 +11,12 @@
 import { defineComponent } from "vue";
 import { useStore } from "vuex";
 import AppTopNav from "@/components/app-topnav.vue";
-
+import AppHeader from "@/components/app-header.vue";
 export default defineComponent({
   name: "xtx-layout",
   components: {
     AppTopNav,
+    AppHeader,
   },
   setup(props) {
     const store = useStore();
