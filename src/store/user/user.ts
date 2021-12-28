@@ -1,4 +1,8 @@
-export default {
+import { Module } from 'vuex'
+import {IUserState} from './types'
+import {IRootState} from '../types'
+
+const userModule: Module<IUserState, IRootState> = {
   namespaced: true,
   state(){
     return {
@@ -22,3 +26,4 @@ export default {
     }
   }
 }
+export default  userModule
