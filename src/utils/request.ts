@@ -4,6 +4,7 @@
 // 4. 导出一个函数，调用当前的axsio实例发请求，返回值promise
 
 import axios from 'axios'
+import type { Method, AxiosRequestConfig } from 'axios'
 // import store from '@/store'
 import { userStore } from '@/store'
 import router from '@/router'
@@ -39,7 +40,7 @@ instance.interceptors.response.use(res => res.data, err => {
     // 1. 清空无效用户信息
     // 2. 跳转到登录页
     // 3. 跳转需要传参（当前路由地址）给登录页码
-    store.commit('user/setUser', {})
+    userStore().commit('user/setUser', {})
     // 当前路由地址
     // 组件里头：`/user?a=10` $route.path === /user  $route.fullPath === /user?a=10
     // js模块中：router.currentRoute.value.fullPath 就是当前路由地址，router.currentRoute 是ref响应式数据
@@ -51,7 +52,7 @@ instance.interceptors.response.use(res => res.data, err => {
 })
 
 // 请求工具函数
-export default (url, method, submitData) => {
+export default (url:string, method:Method, submitData: any) => {
   // 负责发请求：请求地址，请求方式，提交的数据
   return instance({
     url,
