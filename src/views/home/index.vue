@@ -7,4 +7,7 @@ name: "xtx-home-page";
 </script>
 
 <style scoped lang='less'>
+.xtx-home-page {
+  color: @xtxColor;
+}
 </style>
